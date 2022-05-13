@@ -1,0 +1,185 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-backgroud: #8ecfb9;
+  --color-backgroud-card: #f2f3f5;
+  --color-line: #d3e2e6;
+  --color-button-login: #fcd3c2;
+  --color-button-login-hover: #af9bc2;
+
+  --text-title: #5c8599;
+  --text-label: #4e4e4e;
+
+  font-size: 62.5%;
+}
+
+/*-------------------------------Geral---------------------------------*/
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: 'Nunito';
+  font-size: 1.6rem;
+
+  text-align: center;
+
+  overflow: overlay;
+
+  background-color: var(--color-backgroud);
+}
+
+.wrapper {
+  width: min(50rem, 100%);
+  margin-inline: auto;
+}
+
+/*----------------Login----------------*/
+
+#login .wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+#login .image img {
+  margin-block: 2.5rem;
+  width: 20rem;
+}
+
+/*----------------Card-Login----------------*/
+
+#login .cards {
+  background-color: var(--color-backgroud-card);
+  padding: 2.5rem;
+  border-radius: 1.5rem;
+  margin-inline: 3.8rem;
+  margin-bottom: 2rem;
+}
+
+#login .cards form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+#login .cards form label {
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 2.9rem;
+  color: var(--text-label);
+  padding-left: 1.5rem;
+}
+
+#login .cards form input {
+  height: 5.6rem;
+
+  background: white;
+  /* Back / Lines in white */
+
+  border: 1px solid var(--color-line);
+  border-radius: 2rem;
+
+  padding-left: 1rem;
+
+  transition: border 0.2s;
+}
+
+#login .cards form input:hover {
+  border: 1px solid var(--color-backgroud);
+}
+
+#login .cards form input:active {
+  border: 1px solid var(--color-backgroud);
+}
+
+#login .cards .card {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 0.3rem;
+}
+
+#login .cards .card:nth-child(2) {
+  margin-bottom: 3.1rem;
+}
+
+#login .cards .button-login {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-button-login);
+  color: var(--text-label);
+  text-decoration: none;
+
+  border-radius: 1.5rem;
+  padding-block: 1.4rem;
+
+  transition: background-color 0.2s;
+}
+
+#login .cards .button-login:hover {
+  background-color: var(--color-button-login-hover);
+}
+
+#login .cards .button-login img {
+  height: 2rem;
+  padding-right: 2rem;
+}
+
+#login .cards .button-login p {
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 2.9rem;
+}
+
+#login .wrapper .background-image {
+  opacity: 0;
+  display: hidden;
+}
+
+@media (min-width: 1024px) {
+  /* -------Geral-------*/
+  body {
+    overflow: auto;
+  }
+
+  .wrapper {
+    width: min(55rem, 100%);
+  }
+
+  #login .wrapper .background-image {
+    opacity: 1;
+    visibility: initial;
+
+    margin-right: 10.5rem;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 25rem;
+  }
+
+  #login .card-login {
+    background-color: var(--color-backgroud-card);
+    padding: 3rem 0;
+    border-radius: 1.5rem;
+    margin-inline: 2.5rem;
+    margin-block: 20rem;
+  }
+
+  #login .image img {
+    margin-block: 1rem;
+    width: 10rem;
+  }
+}

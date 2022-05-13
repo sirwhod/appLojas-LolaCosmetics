@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Validação de Dados</title>
+
+    <link rel="stylesheet" href="../style/forms.css" />
+    <link rel="stylesheet" href="../style/validatedata.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav>
+      <div class="wrapper">
+        <header>
+          <a href="./salesdata.html">
+            <svg
+              width="25"
+              height="25"
+              viewBox="0 0 25 25"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M19.7917 12.5L5.20832 12.5"
+                stroke="#DAD7EC"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M12.5 19.7917L5.20833 12.5001L12.5 5.20841"
+                stroke="#DAD7EC"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </a>
+
+          <h1>Valide os Dados</h1>
+
+          <a href="./index.html">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M18 6L6 18"
+                stroke="#8FA7B3"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M6 6L18 18"
+                stroke="#8FA7B3"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </a>
+        </header>
+      </div>
+    </nav>
+
+    <section id="validate">
+      <div class="wrapper">
+        <header>
+          <h1>Valide os Dados</h1>
+        </header>
+
+        <div class="content">
+          <div id="dataSaller" class="datasSection">
+            <div class="title">
+              <h1>Informações do Vendedor</h1>
+            </div>
+            <div class="datas">
+              <div class="data">
+                <h2>Código do vendedor:</h2>
+                <h2>1111</h2>
+              </div>
+              <div class="data">
+                <h2>Nome do vendedor:</h2>
+                <h2>Rodrigo Brandão</h2>
+              </div>
+              <div class="data">
+                <h2>Loja do vendedor:</h2>
+                <h2>Barra Shopping</h2>
+              </div>
+            </div>
+          </div>
+          <div id="dataProducts" class="datasSection">
+            <div class="title">
+              <h1>Informações dos Produtos</h1>
+            </div>
+            <div class="datas">
+              <div class="data">
+                <h2>Código do produto:</h2>
+                <h2>30200100100</h2>
+              </div>
+              <div class="data">
+                <h2>Nome do Produto:</h2>
+                <h2>Segura Esses Sais Xo Uruca 450G</h2>
+              </div>
+              <div class="data">
+                <h2>Quantidade:</h2>
+                <h2>2</h2>
+              </div>
+            </div>
+          </div>
+          <div id="dataClient" class="datasSection">
+            <div class="title">
+              <h1>Informações do Vendedor</h1>
+            </div>
+            <div class="datas">
+              <div class="data">
+                <h2>Nome do Cliente:</h2>
+                <h2>Rodrigo Brandão</h2>
+              </div>
+              <div class="data">
+                <h2>Telefone</h2>
+                <h2>+55(21)99999-9999</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="form">
+      <div class="wrapper">
+        <div class="content">
+          <form action="">
+            <label for="cuponCode">Código do cupom</label>
+            <input id="cuponCode" type="number" />
+
+            <div class="buttonsValidate">
+              <a href="./salesdata.html" class="button-correct"> Corrigir </a>
+              <a href="./send.html" class="button-send"> Enviar </a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script src="../script/cloneNewProducts.js"></script>
+</html>

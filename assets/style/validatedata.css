@@ -1,0 +1,92 @@
+:root {
+  --text-validation: #8fa7b3;
+  --color-button-correct: #e383ad;
+  --color-button-correct-hover: #b06586;
+}
+
+#validate .wrapper header {
+  text-align: left;
+  padding-inline: 2rem;
+  padding-block: 3rem;
+
+  margin-bottom: 1.345rem;
+}
+
+#validate .wrapper header h1 {
+  color: var(--text-title);
+  border-bottom: 1px solid var(--color-line);
+  line-height: 3.345rem;
+}
+
+#validate .content .datasSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+
+  padding-inline: 2rem;
+  margin-bottom: 2rem;
+  font-weight: 600;
+  font-size: 1.2rem;
+  line-height: 2rem;
+  color: var(--text-validation);
+}
+
+#validate .content .datasSection .datas {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#validate .content .datasSection .datas .data {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 8rem;
+}
+
+#form .content .buttonsValidate {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-inline: 2rem;
+
+  margin-bottom: 2rem;
+}
+
+#form .content .buttonsValidate .button-correct {
+  background-color: var(--color-button-correct);
+  padding-block: 1.5rem;
+  padding-inline: 4.7rem;
+  border-radius: 1.5rem;
+  text-decoration: none;
+
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+
+  color: white;
+}
+
+#form .content .buttonsValidate .button-correct:hover {
+  background-color: var(--color-button-correct-hover);
+}
+
+#form .content .buttonsValidate .button-send {
+  background-color: var(--color-button-next);
+  padding-block: 1.5rem;
+  padding-inline: 4.7rem;
+  border-radius: 1.5rem;
+  text-decoration: none;
+
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+
+  color: white;
+}
+
+#form .content .buttonsValidate .button-send:hover {
+  background-color: var(--color-button-next-hover);
+}

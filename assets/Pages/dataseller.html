@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro de Dados</title>
+
+    <link rel="stylesheet" href="../style/forms.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav>
+      <div class="wrapper">
+        <header>
+          <a href="./select.html">
+            <svg
+              width="25"
+              height="25"
+              viewBox="0 0 25 25"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M19.7917 12.5L5.20832 12.5"
+                stroke="#DAD7EC"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M12.5 19.7917L5.20833 12.5001L12.5 5.20841"
+                stroke="#DAD7EC"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </a>
+
+          <h1>Cadastro de Dados</h1>
+
+          <a href="./index.html">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M18 6L6 18"
+                stroke="#8FA7B3"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M6 6L18 18"
+                stroke="#8FA7B3"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </a>
+        </header>
+      </div>
+    </nav>
+
+    <section id="form">
+      <div class="wrapper">
+        <div class="content">
+          <form action="">
+            <label for="store">Loja</label>
+            <input
+              id="store"
+              name="store"
+              list="stores"
+              type="text"
+              placeholder="Selecione a Loja"
+              required
+            />
+
+            <datalist id="stores">
+              <option>Barra Shopping</option>
+              <option>Rio Sul Shopping</option>
+              <option>Shopping Morumbi</option>
+            </datalist>
+          </form>
+        </div>
+      </div>
+    </section>
+    <section id="form">
+      <div class="wrapper">
+        <header>
+          <h1>Dados do Cliente</h1>
+        </header>
+        <div class="content">
+          <form action="">
+            <label for="codeclient">Nome do cliente</label>
+            <input
+              id="codeclient"
+              name="codeclient"
+              type="text"
+              placeholder="Digite o nome do cliente"
+              required
+            />
+            <label for="numberclient">Número de telefone (opcional)</label>
+            <input
+              id="numberclient"
+              name="numberclient"
+              type="number"
+              placeholder="Digite o Número do Cliente"
+            />
+            <div id="sectionCupomCode" class="">
+              <label for="cuponCode">Código do Cupom</label>
+              <input
+                id="cuponCode"
+                name="cuponCode"
+                type="number"
+                placeholder="Digite o código do cupom"
+                required
+              />
+            </div>
+
+            <div class="checkboxs">
+              <label for="alreadyacustomer" class="switch">
+                <span class="swicth-text">Já é cliente Lola?</span>
+                <div class="switch-wrapper">
+                  <input
+                    id="alreadyacustomer"
+                    name="alreadyacustomer"
+                    type="checkbox"
+                  />
+                  <span class="switch-button"></span>
+                </div>
+              </label>
+
+              <label for="purchaseMade" class="switch">
+                <span class="swicth-text">Compra Realizada?</span>
+                <div class="switch-wrapper">
+                  <input
+                    id="purchaseMade"
+                    onclick="onClick()"
+                    name="purchasemade"
+                    type="checkbox"
+                  />
+                  <span class="switch-button"></span>
+                </div>
+              </label>
+            </div>
+
+            <a onclick="onClick()" href="" class="button-next" id="buttonNext">
+              Próximo
+            </a>
+          </form>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script src="../script/main.js"></script>
+</html>

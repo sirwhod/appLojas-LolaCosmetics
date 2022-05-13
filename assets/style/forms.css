@@ -1,0 +1,285 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-backgroud: #8ecfb9;
+  --color-backgroud-page: #f2f3f5;
+  --color-line: #d3e2e6;
+  --color-button-next: #fcd3c2;
+  --color-button-next-hover: #af9bc2;
+  --color-switch-checked: #39cc83;
+  --color-switch-checked-hover: #257e51;
+  --color-switch-unchecked: #cc3965;
+  --color-switch-unchecked-hover: #8b2745;
+  --color-line-add-button: #0fb7a2;
+  --text-title: #5c8599;
+  --text-label: #8fa7b3;
+  --text-button: #4e4e4e;
+
+  font-size: 62.5%;
+}
+
+/*-------------------------------Geral---------------------------------*/
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: 'Nunito';
+  font-size: 1.6rem;
+
+  text-align: center;
+
+  overflow: overlay;
+
+  background-color: var(--color-backgroud-page);
+}
+
+.wrapper {
+  width: min(50rem, 100%);
+  margin-inline: auto;
+}
+
+/*-------------------------------Navigation---------------------------------*/
+
+nav {
+  width: 100%;
+  background-color: var(--color-backgroud);
+}
+
+nav header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+}
+
+nav h1 {
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 2.4rem;
+  color: white;
+}
+
+/*-------------------------------Formulários---------------------------------*/
+
+#form header {
+  text-align: left;
+  padding-inline: 2rem;
+  padding-block: 3rem;
+
+  margin-bottom: 1.345rem;
+}
+
+#form header h1 {
+  color: var(--text-title);
+  border-bottom: 1px solid var(--color-line);
+  line-height: 3.345rem;
+}
+
+#form .content {
+  margin-top: 4rem;
+}
+
+#form .content form {
+  padding-inline: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-decoration: none;
+  text-align: left;
+}
+
+#form .content form label {
+  font-size: 1.4rem;
+  color: var(--text-label);
+}
+
+#form .content form input {
+  height: 4.6rem;
+  border-radius: 1.5rem;
+  border: 1px solid var(--color-line);
+  padding: 1.5rem;
+  margin-bottom: 3rem;
+  width: 100%;
+}
+
+#form .content form .cupomCode {
+  opacity: 0;
+  display: none;
+}
+
+#form .content .products {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+#form .content form .checkboxs {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
+#form .content form .checkboxs .switch {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  cursor: pointer;
+  margin-bottom: 1.2rem;
+}
+
+#form .content form .checkboxs .switch input#alreadyacustomer {
+  margin: 0;
+}
+
+#form .content form .checkboxs .switch input#purchasemade {
+  margin: 0;
+}
+
+/*-------------------------------Criando-Swicth--------------------------------*/
+
+#form .content form .checkboxs .switch .switch-wrapper {
+  display: inline-block;
+  width: 6.4rem;
+  height: 2.4rem;
+  position: relative;
+}
+
+#form .content form .checkboxs .switch .switch-wrapper .switch-button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 2rem;
+  background-color: var(--color-switch-unchecked);
+}
+
+#form .content form .checkboxs .switch .switch-wrapper .switch-button::before {
+  content: '';
+  width: 2.6rem;
+  height: 1.2rem;
+  position: absolute;
+  left: 0.6rem;
+  bottom: 0.6rem;
+  border-radius: 2rem;
+  transition: 0.4s all ease;
+  background-color: white;
+}
+
+#form .content form .checkboxs .switch .switch-wrapper .switch-button:hover {
+  background-color: var(--color-switch-unchecked-hover);
+}
+
+#form
+  .content
+  form
+  .checkboxs
+  .switch
+  .switch-wrapper
+  input:checked
+  + .switch-button {
+  background-color: var(--color-switch-checked);
+}
+
+#form
+  .content
+  form
+  .checkboxs
+  .switch
+  .switch-wrapper
+  input:checked
+  + .switch-button:hover {
+  background-color: var(--color-switch-checked-hover);
+}
+
+#form
+  .content
+  form
+  .checkboxs
+  .switch
+  .switch-wrapper
+  input:checked
+  + .switch-button::before {
+  transform: translateX(2.6rem);
+}
+
+#form .content form .checkboxs .switch .switch-wrapper input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/*#form .content form input:nth-child(4) {
+  margin-bottom: 18rem;
+}*/
+
+#form .content form input:hover {
+  border: 1px solid var(--color-backgroud);
+}
+
+#form .content form a.button-next {
+  background-color: var(--color-button-next);
+  border: none;
+  border-radius: 1.5rem;
+  padding-block: 2rem;
+
+  color: var(--text-button);
+  font-size: 1.8rem;
+  font-weight: 500;
+
+  margin-bottom: 5rem;
+
+  text-decoration: none;
+  text-align: center;
+
+  transition: background-color 0.2s;
+}
+#form .content form a.button-next:hover {
+  background-color: var(--color-button-next-hover);
+  color: white;
+}
+
+#form .content form a#addProduct {
+  height: 4.6rem;
+  border-radius: 1.5rem;
+  border: 1px dashed var(--color-line-add-button);
+  padding: 1.5rem;
+  margin-bottom: 3rem;
+  background-color: white;
+
+  text-align: center;
+}
+
+@media (min-width: 1024px) {
+  .wrapper {
+    width: min(112rem, 100%);
+  }
+
+  nav header {
+    padding: 5rem;
+  }
+
+  nav h1 {
+    font-size: 3.1rem;
+    line-height: 4.4rem;
+  }
+}

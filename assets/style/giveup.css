@@ -1,0 +1,64 @@
+#giveup .wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+#giveup header {
+  text-align: left;
+  padding-inline: 2rem;
+  padding-block: 3rem;
+
+  margin-bottom: 1.345rem;
+}
+
+#giveup header h1 {
+  color: var(--text-title);
+  border-bottom: 1px solid var(--color-line);
+  line-height: 3.345rem;
+}
+
+#giveup .content form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-inline: 2rem;
+}
+
+#giveup .content form .checkbox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#giveup .content form .checkbox label {
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 2rem;
+
+  /* Texts / Complementos */
+
+  color: var(--text-label);
+}
+
+#giveup .content .button {
+  background-color: var(--color-button-next);
+  border: none;
+  border-radius: 1.5rem;
+  padding-block: 2rem;
+
+  color: var(--text-button);
+  font-size: 1.8rem;
+  font-weight: 500;
+
+  margin-bottom: 5rem;
+
+  text-decoration: none;
+  text-align: center;
+
+  transition: background-color 0.2s;
+
+}
+#giveup .content .button:hover {
+  background-color: var(--color-button-next-hover);
+  color: white;
+}
